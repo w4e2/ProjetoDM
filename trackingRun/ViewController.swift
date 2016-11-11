@@ -118,8 +118,8 @@ class ViewController: UIViewController {
         seconds = 0.0
         distance = 0.0
         labelTime.text = "0 s"
-        labelSpeed.text = "0 m"
-        labelDistance.text = "0 m/s"
+        labelSpeed.text = "0 m/s"
+        labelDistance.text = "0 m"
         locations.removeAll(keepCapacity: false)
         timer = NSTimer.scheduledTimerWithTimeInterval(1,
                                                        target: self,
