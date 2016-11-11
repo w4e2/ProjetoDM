@@ -12,6 +12,11 @@
 		3DFF3BB71DD5EFF100BB7DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF3BB51DD5EFF100BB7DD2 /* Main.storyboard */; };
 		3DFF3BB91DD5EFF900BB7DD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF3BB81DD5EFF900BB7DD2 /* Assets.xcassets */; };
 		3DFF3BBC1DD5EFFA00BB7DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFF3BBA1DD5EFFA00BB7DD2 /* LaunchScreen.storyboard */; };
+		3DFF3BC51DD5F23300BB7DD2 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF3BC41DD5F23200BB7DD2 /* Track.swift */; };
+		3DFF3BCA1DD6020A00BB7DD2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DFF3BC91DD6020A00BB7DD2 /* MapKit.framework */; };
+		3DFF3BCC1DD6229C00BB7DD2 /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF3BCB1DD6229C00BB7DD2 /* TrackManager.swift */; };
+		3DFF3BCF1DD6309C00BB7DD2 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF3BCE1DD6309C00BB7DD2 /* HistoryTableViewCell.swift */; };
+		3DFF3BD11DD6315C00BB7DD2 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFF3BD01DD6315C00BB7DD2 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		3DFF3BB81DD5EFF900BB7DD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DFF3BBB1DD5EFFA00BB7DD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DFF3BBD1DD5EFFB00BB7DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DFF3BC41DD5F23200BB7DD2 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Track.swift; path = Model/Track.swift; sourceTree = "<group>"; };
+		3DFF3BC91DD6020A00BB7DD2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3DFF3BCB1DD6229C00BB7DD2 /* TrackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackManager.swift; path = Utils/TrackManager.swift; sourceTree = "<group>"; };
+		3DFF3BCE1DD6309C00BB7DD2 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HistoryTableViewCell.swift; path = "Custom Cell/HistoryTableViewCell.swift"; sourceTree = "<group>"; };
+		3DFF3BD01DD6315C00BB7DD2 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DFF3BCA1DD6020A00BB7DD2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +49,7 @@
 		3DFF3BA51DD5EFE900BB7DD2 = {
 			isa = PBXGroup;
 			children = (
+				3DFF3BC91DD6020A00BB7DD2 /* MapKit.framework */,
 				3DFF3BB01DD5EFEE00BB7DD2 /* trackingRun */,
 				3DFF3BAF1DD5EFEC00BB7DD2 /* Products */,
 			);
@@ -54,14 +66,42 @@
 		3DFF3BB01DD5EFEE00BB7DD2 /* trackingRun */ = {
 			isa = PBXGroup;
 			children = (
+				3DFF3BCD1DD6307000BB7DD2 /* Custom Cell */,
+				3DFF3BC61DD5FDD600BB7DD2 /* Utils */,
+				3DFF3BC31DD5F03F00BB7DD2 /* Model */,
 				3DFF3BB11DD5EFEF00BB7DD2 /* AppDelegate.swift */,
 				3DFF3BB31DD5EFF000BB7DD2 /* ViewController.swift */,
+				3DFF3BD01DD6315C00BB7DD2 /* HistoryViewController.swift */,
 				3DFF3BB51DD5EFF100BB7DD2 /* Main.storyboard */,
 				3DFF3BB81DD5EFF900BB7DD2 /* Assets.xcassets */,
 				3DFF3BBA1DD5EFFA00BB7DD2 /* LaunchScreen.storyboard */,
 				3DFF3BBD1DD5EFFB00BB7DD2 /* Info.plist */,
 			);
 			path = trackingRun;
+			sourceTree = "<group>";
+		};
+		3DFF3BC31DD5F03F00BB7DD2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF3BC41DD5F23200BB7DD2 /* Track.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3DFF3BC61DD5FDD600BB7DD2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF3BCB1DD6229C00BB7DD2 /* TrackManager.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3DFF3BCD1DD6307000BB7DD2 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3DFF3BCE1DD6309C00BB7DD2 /* HistoryTableViewCell.swift */,
+			);
+			name = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +136,11 @@
 				TargetAttributes = {
 					3DFF3BAD1DD5EFEC00BB7DD2 = {
 						CreatedOnToolsVersion = 7.3;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -136,7 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DFF3BB41DD5EFF000BB7DD2 /* ViewController.swift in Sources */,
+				3DFF3BCC1DD6229C00BB7DD2 /* TrackManager.swift in Sources */,
 				3DFF3BB21DD5EFEF00BB7DD2 /* AppDelegate.swift in Sources */,
+				3DFF3BD11DD6315C00BB7DD2 /* HistoryViewController.swift in Sources */,
+				3DFF3BC51DD5F23300BB7DD2 /* Track.swift in Sources */,
+				3DFF3BCF1DD6309C00BB7DD2 /* HistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
