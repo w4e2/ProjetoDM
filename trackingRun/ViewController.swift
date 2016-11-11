@@ -43,6 +43,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.'
+        
+        labelTime.text = "0 s"
+        labelSpeed.text = "0 m/s"
+        labelDistance.text = "0 m"
         buttonStartStop.setTitle("Start", forState: .Normal)
         buttonStartStop.addTarget(self, action: #selector(ViewController.startPressed(_:)), forControlEvents: .TouchUpInside)
         buttonStartStop.backgroundColor = UIColor.greenColor()
