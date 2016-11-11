@@ -73,7 +73,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eiH-Q4-N7p">
                                 <rect key="frame" x="246" y="30" width="64" height="64"/>
-                                <state key="normal" title="History"/>
+                                <state key="normal" title="History">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="M4J-Vg-7vC" kind="presentation" modalTransitionStyle="coverVertical" id="KWH-lS-wEW"/>
                                 </connections>

@@ -55,7 +55,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         buttonStartStop.layer.cornerRadius = buttonStartStop.frame.size.height/2
         buttonTrackHistory.layer.borderWidth = 1.0
-        buttonTrackHistory.layer.borderColor = UIColor.whiteColor().CGColor
+        buttonTrackHistory.layer.borderColor = UIColor.blackColor().CGColor
         buttonTrackHistory.layer.cornerRadius = 2
         
 
@@ -69,6 +69,18 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func toggleHistoryButton(enable: Bool){
+        buttonTrackHistory.enabled = enable
+        if enable {
+            buttonTrackHistory.layer.borderColor = UIColor.blackColor().CGColor
+            buttonTrackHistory.setTitleColor(UIColor.blackColor(), forState: .Normal)
+            
+        }else {
+            buttonTrackHistory.layer.borderColor = UIColor.whiteColor().CGColor
+            buttonTrackHistory.setTitleColor(UIColor.whiteColor(), forState: .Normal)
+        }
+        
     }
     func eachSecond(timer: NSTimer?) {
         seconds += 1
@@ -99,7 +111,7 @@ class ViewController: UIViewController {
         locationManager.stopUpdatingLocation()
     }
     func startPressed(sender: UIButton) {
-        buttonTrackHistory.enabled = false
+        toggleHistoryButton(false)
         // Here, the location manager will be lazily instantiated
         let overlays = mapView.overlays
         mapView.removeOverlays(overlays)
@@ -139,7 +151,7 @@ class ViewController: UIViewController {
                             forControlEvents: .AllEvents)
         
         sender.addTarget(self, action: #selector(ViewController.startPressed(_:)), forControlEvents: .TouchUpInside)
-        buttonTrackHistory.enabled = true
+        toggleHistoryButton(true)
 
     }
     
